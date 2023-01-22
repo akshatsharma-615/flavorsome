@@ -1,8 +1,6 @@
 import express from "express";
 import cors from "cors";
 import { config } from "dotenv";
-import { PORT } from "./config/index.mjs";
-import connect from "./db/index.mjs";
 import apiAuth from "./routes/auth.mjs";
 import apiRecipes from "./routes/recipe.mjs";
 import path, { dirname } from "path";
@@ -28,7 +26,4 @@ if (process.env.NODE_ENV === "production") {
 	});
 } // Serve the build files if the app is in production mode
 
-app.listen(PORT, () => {
-	connect();
-	console.log(`Server started at port ${PORT}`);
-});
+export default app;
