@@ -4,5 +4,5 @@
    "builds": [
       { "src": "server.mjs", "use": "@now/node" }
    ],
-   "rewrites": [{ "source": "/api/(.*)", "destination": "/api" }]
+   "rewrites": [{ "source": "/api/(.*)", "destination": "/api/index.mjs" }]
 }
